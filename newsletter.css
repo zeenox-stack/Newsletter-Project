@@ -1,0 +1,215 @@
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(234, 29%, 20%);
+  font-family: "Roboto", sans-serif;
+}
+
+.contents {
+  display: flex;
+  margin: 0;
+}
+
+.container {
+  height: auto;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 38rem;
+  animation: smoothEntry 0.4s 1 ease;
+}
+
+.desktop-image {
+  height: 27rem;
+  width: 50%;
+  margin-right: 0;
+}
+
+.mobile-image {
+  display: none;
+}
+
+.success-message {
+  display: none;
+  width: 100%;
+  animation: smoothEntry 1s 1 ease;
+}
+
+.more-contents {
+  padding: 1rem;
+  margin-bottom: 0rem;
+}
+
+.success-button {
+  height: 2rem;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image > img {
+  height: 2.5rem;
+  padding: 1rem;
+  width: 2.5rem;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.success-contents {
+  padding: 1.2rem;
+  font-size: 11px;
+}
+
+.success-contents > h3 {
+  font-size: 2rem;
+  color: hsl(234, 29%, 20%);
+  margin-top: 0;
+  padding: 0;
+}
+
+.success-contents > p {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.main-area {
+  padding-left: 1rem;
+  padding-top: 2.3rem;
+}
+
+h1 {
+  text-align: center;
+  color: hsl(234, 29%, 20%);
+  font-family: inherit;
+  font-size: 2rem;
+  margin-right: 1rem;
+  word-wrap: normal;
+  white-space: nowrap;
+}
+
+.main-area > p {
+  font-size: 13px;
+}
+
+.lists > P {
+  margin: 0;
+  padding: 10px 1rem 10px 0;
+  font-size: 13px;
+  font-family: inherit;
+  word-wrap: normal;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.lists > p > img {
+  height: 15px;
+  padding-right: 0.5rem;
+}
+
+.labels > label {
+  font-family: inherit;
+  font-weight: bold;
+}
+
+.labels {
+  margin-bottom: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.labels > p {
+  padding: 0 1rem 0 0;
+  margin: 0;
+  color: red;
+  font-size: 13px;
+}
+
+#mails {
+  padding: 0.6rem;
+  width: 90%;
+  border-radius: 5px;
+  font-family: inherit;
+  border: 0.1px solid hsl(231, 7%, 60%);
+}
+
+button {
+  margin-top: 1rem;
+  width: 96%;
+  padding: 1rem 0.5rem;
+  background-color: hsl(234, 29%, 20%);
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+button:hover {
+  background: linear-gradient(
+    to right,
+    hsl(340, 100%, 61%),
+    hsl(12, 100%, 56%)
+  );
+}
+
+@keyframes smoothEntry {
+  0% {
+    transform: scale(300%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .desktop-image {
+    display: none;
+  }
+
+  .mobile-image {
+    display: flex;
+  }
+  .contents {
+    flex-direction: column-reverse;
+    display: flex;
+  }
+
+  .success-message {
+    display: none;
+    padding-top: 5.5rem;
+  }
+
+  .image > img {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+
+  .container {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0.5rem;
+  }
+
+  .success-contents > p {
+    max-width: auto;
+  }
+
+  .success-button {
+    margin-top: 11rem;
+    height: 2.8rem;
+    width: 100%;
+  }
+}
